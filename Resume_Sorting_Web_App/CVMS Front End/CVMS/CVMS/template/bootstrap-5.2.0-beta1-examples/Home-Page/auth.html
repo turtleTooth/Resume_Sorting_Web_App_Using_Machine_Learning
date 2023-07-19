@@ -1,0 +1,12 @@
+Enter password: <input id='password' type='text'  />
+<a href="http://127.0.0.1:5000" onclick="javascript:return validatePass()">Validate</a>
+<script>
+function validatePass(){
+    if(document.getElementById('password').value == '5556'){
+        return true;
+    }else{
+        alert('Invalid Password');
+        return false;
+    }
+}
+</script>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                outline: none;
+                font-size: 'Nunito' , sans-serif;
+            
+            }
+            body{
+                width: 100%;
+                height: auto;
+            }
+            
+            h1{
+                line-height: 1.5;
+            }
+            
+            header{
+                width: 100%;
+                height: 300px;
+                background-image: url("file:///H:/CVMS Front End/CVMS/image/download%20(2).jpg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                position: relative;   
+            }
+            .header.t {
+                position: absolute;
+                top: 7rem;
+                left: 3rem;
+                letter-spacing: 3;
+                font-weight: bolder;
+                font-size: 52px;
+                color: #fff;
+                text-shadow: 4px 2px 0px rgba(235, 33, 33, 0.2);
+            }
+            .header.t > span{
+                color: rgb(49, 127, 204);
+            }
+            .job-list{
+                margin: 5%;
+                padding: 1rem;
+                background-color: rgb(248, 255, 255);
+            }
+            .job-card{
+                display: flex;
+                justify-content: space-between;
+                padding: 1rem;
+                margin: 1rem;
+                min-height: 100px;
+                align-items: center;
+                background-color: #fff;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                cursor: pointer;
+            }
+            .job-card:hover{
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            }
+            .job-name{
+                display: flex;
+            }
+            .job-profile{
+                width: 60px;
+                height: 60px;
+                margin: 0.5rem;
+            }
+            .job-detail{
+               padding: 0 10px; 
+            }
+            .job-detail > h4{
+                color: rgb(232, 132, 132);
+                font-size: 0.9rem;
+             }
+             .job-detail > p{
+               display: -webkit-box;
+               overflow: hidden;
+               -webkit-line-clamp: 2;
+               -webkit-box-orient: vertical; 
+             }
+            .job-level{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .job-level > a{
+                padding: 0 1rem;
+                margin: 0.2rem;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 20px;
+                font-size: 0.8rem;
+            }
+            .label-a{
+                background-color: rgb(181, 211, 9);
+            }
+            .label-b{
+                background-color: blue;
+            }
+            .label-c{
+                background-color: rgb(243, 72, 20);
+            }
+            .job-posted{
+                font-size: 0.8rem;
+            }
+            .job-more{
+                display: block;
+                padding: 0.3rem 2rem;
+                margin: 20px auto;
+                width: 250px;
+                background-color: transparent;
+                color: rgb(249, 181, 181);
+                border: 1px solid rgb(96, 228, 87) ;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+            .job-more:hover{
+                background-color: rgb(44, 43, 41);
+            }
+            .join{
+                width: 100% ;
+                height: 350px;
+                background-image: url(file:///C:/Users/ASUS/Downloads/CVMS/image/images.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: rgb(245, 234, 234);
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding: 1rem 3rem;
+                align-items: center;
+                position: relative;
+            }
+            .join::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(180deg, rgba(0, 85,177,0.6)0%, rgba(0, 122,255,0.5)100%),
+                linear-gradient(180deg, rgba(0, 122,255,0.65)0% , transparent 100%);
+                z-index: 1;
+            }
+            .join-detail{
+                min-width: 280px;
+                width: 50px;
+                z-index: 2;
+                margin-bottom: 1rem;
+            }
+            .join-detail > h1{
+                font-size: 36px;
+                letter-spacing: 2;
+            }
+            .join-button{
+                width: 200px;
+                padding: 1rem;
+                border: none;
+                color: black;
+                background-color: rgb(210, 241, 10);
+                box-shadow: rgba(0, 0, 0,0.35) 0px, 5px, 15px;
+                z-index: 2;
+                cursor: pointer;
+            }
+            .join-button:hover{
+                background: transparent;
+                border: 2px solid rgba(181, 211, 9);
+                color: rgba(210, 241, 10);
+            }
+        </style>
+        <body>
+            
+       
+        <link href="jobs.css" rel="stylesheet">
+        <link rel="stylesheet" href="footer.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+      
+        <header>
+             <h1 class="header.t">
+                FIND YOUR <br> <span>PERFECT JOB </span> <br> EASILY 
+            </h1>
+        </header>
+        <!-- job list -->
+        <section class="job-list" id="jobs">
+            <div class="job-card">
+                <div class="job-name">
+                    <img class="job-profile" src="file:///H:/CVMS Front End/CVMS/image/download.png">
+                    <div class="job-detail">
+                        <h4>Tesla</h4>
+                        <h3>Machanical Enginiaing</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="job-level">
+                    <a class="label-a" href="#">HTML</a>
+                    <a class="label-b" href="#">CSS</a>
+                    <a class="label-c" href="#">JavaScript</a>
+                </div>
+                <div class="job-posted">
+                    Posted 2 min ago
+                </div>
+            </div>
+
+
+
+            <div class="job-card">
+                <div class="job-name">
+                    <img class="job-profile" src="file:///H:/CVMS Front End/CVMS/image/download%201.png">
+                    <div class="job-detail">
+                        <h4>Ebay</h4>
+                        <h3>Bussiness Development</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="job-level">
+                    <a class="label-a" href="#">HTML</a>
+                    <a class="label-b" href="#">CSS</a>
+                    <a class="label-c" href="#">JavaScript</a>
+                </div>
+                <div class="job-posted">
+                    Posted 2 min ago
+                </div>
+            </div>
+
+
+            <div class="job-card">
+                <div class="job-name">
+                    <img class="job-profile" src="file:///H:/CVMS Front End/CVMS/image/download%20tik.png">
+                    <div class="job-detail">
+                        <h4>Tiktok</h4>
+                        <h3>Digital MARKETING</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="job-level">
+                    <a class="label-a" href="#">HTML</a>
+                    <a class="label-b" href="#">CSS</a>
+                    <a class="label-c" href="#">JavaScript</a>
+                </div>
+                <div class="job-posted">
+                    Posted 2 min ago
+                </div>
+            </div>
+            <div class="job-card">
+                <div class="job-name">
+                    <img class="job-profile" src="file:///H:/CVMS Front End/CVMS/image/download%20you.png">
+                    <div class="job-detail">
+                        <h4>Youtube</h4>
+                        <h3>UI Ux DESIGN</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="job-level">
+                    <a class="label-a" href="#">HTML</a>
+                    <a class="label-b" href="#">CSS</a>
+                    <a class="label-c" href="#">JavaScript</a>
+                </div>
+                <div class="job-posted">
+                    Posted 1 hour ago
+                </div>
+            </div>
+            <div class="job-card">
+                <div class="job-name">
+                    <img class="job-profile" src="file:///H:/CVMS Front End/CVMS/image/download%20amg.png">
+                    <div class="job-detail">
+                        <h4>Amazon</h4>
+                        <h3>Softwere Enginieer</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="job-level">
+                    <a class="label-a" href="#">HTML</a>
+                    <a class="label-b" href="#">CSS</a>
+                    <a class="label-c" href="#">JavaScript</a>
+                </div>
+                <div class="job-posted">
+                    Posted 2 min ago
+                </div>
+            </div>
+            <button class="job-more"> More List</button>
+
+        </section>
+        
+
+        <section class="join">
+            <div class="join-detail">
+                <h1 class="section-titel">LETS START YOUR NEW JOB WITH US</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+            </div>
+            <button class="join-button" > Join Now</button>
+        </section>
+        </div>
+        </body>
+            
+    </head>
+</html>

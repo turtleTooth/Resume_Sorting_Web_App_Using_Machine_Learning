@@ -1,0 +1,90 @@
+{% extends 'home_page.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html>
+    <head>
+
+      <style>
+        *{
+          margin: 0;
+          padding: 0;
+        }
+        body{
+          background-color: azure;
+          color: rgb(0, 0, 0);
+          font-family: sans-serif;
+        }
+        .container-fluid{
+          width: 500px;
+          background-color: #fff;
+          box-shadow: 0 0 20px 0 #999;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          position:absolute;
+        }
+        form{
+          margin: 35px;
+        
+        }
+        .form-control{
+          width: 400px;
+          height: 40px;
+          margin-top: 20px;
+          padding-left: 10px;
+          padding-right: 10px;
+          border-radius: 14px;
+          border: 1px solid #777;
+          outline: none;
+        }
+        .form-control_text{
+          height: 150px;
+          padding-top: 10px;
+        }
+        .btn {
+          border-radius: 20px;
+          color: #fff;
+          margin-top: 18px;
+          padding: 10px;
+          background-color: #1618af;
+          border: none;
+          cursor: pointer;
+        }
+        
+      </style>
+
+        <link href="signin.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+        <div class="container-fluid">
+            <h1 style="text-align: center;" > Please sign in</h1>
+            
+            <form method="post" action="/signin">
+              {% csrf_token %}
+            
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
+              </div>
+            
+              <div class="checkbox mb-3">
+                <label>
+                  <input type="checkbox" value="remember-me"> Remember me
+                </label>
+              </div>
+
+              <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+              <br>
+              <br>
+    
+               <a href="file:///H:/CVMS%20Front%20End/CVMS/CVMS/template/bootstrap-5.2.0-beta1-examples/Home-Page/home_page.html#" class="btn btn-primary">Go to Home Page</a>
+    </form>
+            
+    </head>
+</html>
+
+{% endblock body %}

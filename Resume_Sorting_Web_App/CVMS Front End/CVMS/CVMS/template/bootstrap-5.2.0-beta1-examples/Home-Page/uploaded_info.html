@@ -1,0 +1,38 @@
+{% extends 'home_page.html' %}
+{% block body %}
+
+{% load crispy_forms_tags %}
+<link rel="stylesheet" href="uploaded.css">
+<link rel="stylesheet" href="footer.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(242, 245, 247);
+}
+.contain{
+    text-align: center;
+}
+.btn {
+    border-radius: 20px;
+    color: #fff;
+    margin-top: 18px;
+    padding: 10px;
+    background-color: #dd2511;
+    border: none;
+    cursor: pointer;
+}
+</style>
+<div class="contain">
+  <h2>Upload Application Info</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <br>
+    <button type="submit" class="btn btn-info">Submit</button>
+  </form>
+  </div>
+  
+
+{% endblock body %}
